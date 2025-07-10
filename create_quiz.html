@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <title>Create Quiz</title>
+</head>
+<body>
+    <h1>Create New Quiz</h1>
+    <form method="POST">
+        Quiz Title: <input type="text" name="title"><br>
+        <input type="submit" value="Create">
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

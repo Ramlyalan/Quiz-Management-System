@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <title>Quiz App</title>
+</head>
+<body>
+    <h1>Available Quizzes</h1>
+    <a href="/create_quiz">Create New Quiz</a>
+    <ul>
+        {% for quiz in quizzes %}
+        <li>{{ quiz.title }} - 
+            <a href="/add_question/{{ quiz.id }}">Add Questions</a> | 
+            <a href="/take_quiz/{{ quiz.id }}">Take Quiz</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

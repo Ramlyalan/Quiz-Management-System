@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <title>Add Question</title>
+</head>
+<body>
+    <h1>Add Question to {{ quiz.title }}</h1>
+    <form method="POST">
+        Question: <input type="text" name="question_text"><br>
+        Option A: <input type="text" name="option_a"><br>
+        Option B: <input type="text" name="option_b"><br>
+        Option C: <input type="text" name="option_c"><br>
+        Option D: <input type="text" name="option_d"><br>
+        Correct Option (A/B/C/D): <input type="text" name="correct_option"><br>
+        <input type="submit" value="Add Question">
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
